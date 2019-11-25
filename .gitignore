@@ -1,0 +1,6 @@
+/build*
+/.cproject
+/.project
+/.pydevproject
+/.settings
+*__pycache__
