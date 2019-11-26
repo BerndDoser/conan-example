@@ -2,7 +2,7 @@ from conans import ConanFile, CMake
 
 class ConanExampleConan(ConanFile):
     
-    name = "conan_example"
+    name = "conan-example"
     version = "1.0"
     license = "MIT"
     description = "C++ example using CMake and conan.io"
@@ -13,9 +13,7 @@ class ConanExampleConan(ConanFile):
     no_copy_source = True
     
     settings = "os", "compiler", "build_type", "arch"
-    requires = \
-        "gtest/1.8.1@bincrafters/stable", \
-        "pybind11/2.3.0@conan/stable"
+    requires = "range-v3/0.9.1@ericniebler/stable"
     generators = "cmake"
 
     def build(self):
