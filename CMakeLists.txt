@@ -4,7 +4,10 @@ project(cmake_example VERSION 1.0 LANGUAGES CXX)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra")
 
-# Conan
+include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
+conan_basic_setup()
+
+# # Conan
 # find_program(CONAN conan)
 # if(CONAN)
 #     if(NOT EXISTS "${CMAKE_BINARY_DIR}/conan.cmake")
