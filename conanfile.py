@@ -6,8 +6,8 @@ class ConanExampleConan(ConanFile):
     version = "1.0"
     license = "MIT"
     description = "C++ example using CMake and conan.io"
-    homepage = "https://github.com/BerndDoser/conan_example"
-    url = "https://github.com/BerndDoser/conan_example.git"
+    homepage = "https://github.com/BerndDoser/conan-example"
+    url = "https://github.com/BerndDoser/conan-example.git"
     
     exports_sources = "include/*", "test/*", "CMakeLists.txt"
     no_copy_source = True
