@@ -9,7 +9,7 @@ class ConanExampleConan(ConanFile):
     homepage = "https://github.com/BerndDoser/conan-example"
     url = "https://github.com/BerndDoser/conan-example.git"
     
-    exports_sources = "include/*", "test/*", "CMakeLists.txt"
+    exports_sources = "include/*", "src/*", "test/*", "CMakeLists.txt"
     no_copy_source = True
     
     settings = "os", "compiler", "build_type", "arch"
@@ -20,7 +20,6 @@ class ConanExampleConan(ConanFile):
         cmake = CMake(self)
         cmake.configure()
         cmake.build()
-        cmake.test()
 
     def package(self):
         self.copy("*.h", dst="include")
